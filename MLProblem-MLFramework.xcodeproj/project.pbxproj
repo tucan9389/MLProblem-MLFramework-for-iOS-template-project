@@ -13,6 +13,8 @@
 		71BBE07C22E40E0000E74F11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71BBE07B22E40E0000E74F11 /* Assets.xcassets */; };
 		71BBE07F22E40E0000E74F11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71BBE07D22E40E0000E74F11 /* LaunchScreen.storyboard */; };
 		71BBE08722E4120900E74F11 /* LiveImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BBE08622E4120900E74F11 /* LiveImageViewController.swift */; };
+		71BBE08A22E412F200E74F11 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BBE08822E412F200E74F11 /* VideoCapture.swift */; };
+		71BBE08B22E412F200E74F11 /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BBE08922E412F200E74F11 /* Measure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		71BBE07E22E40E0000E74F11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71BBE08022E40E0000E74F11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71BBE08622E4120900E74F11 /* LiveImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveImageViewController.swift; sourceTree = "<group>"; };
+		71BBE08822E412F200E74F11 /* VideoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
+		71BBE08922E412F200E74F11 /* Measure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +64,21 @@
 				71BBE07422E40DFF00E74F11 /* AppDelegate.swift */,
 				71BBE07622E40DFF00E74F11 /* StillImageViewController.swift */,
 				71BBE08622E4120900E74F11 /* LiveImageViewController.swift */,
+				71BBE08C22E412F900E74F11 /* utils */,
 				71BBE07B22E40E0000E74F11 /* Assets.xcassets */,
 				71BBE07D22E40E0000E74F11 /* LaunchScreen.storyboard */,
 				71BBE08022E40E0000E74F11 /* Info.plist */,
 			);
 			path = "MLProblem-MLFramework";
+			sourceTree = "<group>";
+		};
+		71BBE08C22E412F900E74F11 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				71BBE08922E412F200E74F11 /* Measure.swift */,
+				71BBE08822E412F200E74F11 /* VideoCapture.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +152,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71BBE08A22E412F200E74F11 /* VideoCapture.swift in Sources */,
 				71BBE07722E40DFF00E74F11 /* StillImageViewController.swift in Sources */,
+				71BBE08B22E412F200E74F11 /* Measure.swift in Sources */,
 				71BBE08722E4120900E74F11 /* LiveImageViewController.swift in Sources */,
 				71BBE07522E40DFF00E74F11 /* AppDelegate.swift in Sources */,
 			);
