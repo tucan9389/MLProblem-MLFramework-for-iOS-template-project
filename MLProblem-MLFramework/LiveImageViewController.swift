@@ -33,6 +33,9 @@ class LiveImageViewController: UIViewController {
     // MARK: - AV Properties
     var videoCapture: VideoCapture!
     
+    // MARK - Performance Measurement Property
+    private let 👨‍🔧 = 📏()
+    
     // MARK: - View Controller Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +45,9 @@ class LiveImageViewController: UIViewController {
         
         // setup camera
         setUpCamera()
+        
+        // setup delegate for performance measurement
+        👨‍🔧.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -108,6 +114,9 @@ extension LiveImageViewController: VideoCaptureDelegate {
         
         // the captured image from camera is contained on pixelBuffer
         if let pixelBuffer = pixelBuffer {
+            // start of measure
+            self.👨‍🔧.🎬👏()
+            
             //// start predict
             //self.predictUsingVision(pixelBuffer: pixelBuffer)
         }
@@ -124,8 +133,28 @@ extension LiveImageViewController: VideoCaptureDelegate {
 //    }
 //
 //    func visionRequestDidComplete(request: VNRequest, error: Error?) {
+//        // middle of measure
+//        self.👨‍🔧.🏷(with: "endInference")
+//
 //        if let classificationResults = request.results as? [VNClassificationObservation] {
-//            // <#TODO#>
+//            // <#TODO - post-processing#>
+//            //
+//            //
+//        }
+//
+//        DispatchQueue.main.sync {
+//            // end of measure
+//            self.👨‍🔧.🎬🤚()
 //        }
 //    }
 //}
+
+// MARK: - 📏(Performance Measurement) Delegate
+extension LiveImageViewController: 📏Delegate {
+    func updateMeasure(inferenceTime: Double, executionTime: Double, fps: Int) {
+        //print(executionTime, fps)
+        self.inferenceLabel.text = "inference: \(Int(inferenceTime*1000.0)) mm"
+        self.etimeLabel.text = "execution: \(Int(executionTime*1000.0)) mm"
+        self.fpsLabel.text = "fps: \(fps)"
+    }
+}
