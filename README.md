@@ -14,7 +14,7 @@ This project is XXXX XXXXXXXX on iOS with Core ML.<br>If you are interested in i
 
 ## How it works
 
-
+> Preparing...
 
 ## Requirements
 
@@ -24,34 +24,37 @@ This project is XXXX XXXXXXXX on iOS with Core ML.<br>If you are interested in i
 
 ## Model
 
-### Download
+### Download Link
 
-### Matadata
+> Preparing...
 
-|            | modelv1 | modelv2 |
-| :--------: | :-----------: | :------------: |
-| input shape | `[1, 304, 228, 3]`| `[1, 304, 228, 3]` |
-| input node name | `image` | `image` |
-| output shape | `[1, 128, 160]` | `[1, 128, 160]` |
-| output node name | `depthmap` | `depthmap` |
-| size | xxx.x MB | xxx.x MB |
+### Model Size, Minimum iOS Version, Input/Output Shape
 
-### Inference Time
+| Model | Size<br>(MB) | Minimum<br>iOS Version | Input Shape | Output Shape |
+| ----: | :----: | :----: | :----: | :----: |
+| cpm | 2.6 | iOS11 | `[1, 192, 192, 3]` | `[1, 96, 96, 14]` |
+| hourhglass | 2 | iOS11 | `[1, 192, 192, 3]` | `[1, 48, 48, 14]` |
 
-| Device                    | model1    | model2    |
-| ------------------------- | --------- | --------- |
-| iPhone XS                 | (`TODO`)  | (`TODO`)  |
-| iPhone XS Max             | (`TODO`)  | (`TODO`)  |
-| iPad Pro (3rd generation) | **xx ms** | **xx ms** |
-| iPhone X                  | xx ms     | xx ms     |
-| iPhone 8+                 | xx ms     | xx ms     |
-| iPhone 8                  | (`TODO`)  | (`TODO`)  |
-| iPhone 7                  | (`TODO`)  | (`TODO`)  |
-| iPhone 6+                 | xx ms     | xx ms     |
+### Infernece Time (ms)
 
-### Train Your Own Model
+| Model vs. Device | XS | XS<br>Max | XR | X | 8 | 8+ | 7 | 7+ | 6S+ | 6+ |
+| ----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| cpm | - | 27 | 27 | 32 | 31 | 31 | 39 | 37 | 44 | 115 |
+| hourhglass | - | 6 | 7 | 29 | 31 | 32 | 37 | 42 | 48 | 94 |
 
+### Total Time (ms)
 
+| Model vs. Device | XS | XS<br>Max | XR | X | 8 | 8+ | 7 | 7+ | 6S+ | 6+ |
+| ----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| cpm | - | 39 | 40 | 46 | 47 | 45 | 55 | 58 | 56 | 139 |
+| hourhglass | - | 15 | 15 | 38 | 40 | 40 | 48 | 55 | 58 | 106 |
+
+### FPS
+
+| Model vs. Device | XS | XS<br>Max | XR | X | 8 | 8+ | 7 | 7+ | 6S+ | 6+ |
+| ----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| cpm | - | 23 | 23 | 20 | 20 | 21 | 17 | 16 | 16 | 6 |
+| hourhglass | - | 23 | 23 | 24 | 23 | 23 | 19 | 16 | 15 | 8 |
 
 ## Build & Run
 
@@ -124,9 +127,4 @@ Hit the `⌘ + U` or click the `Build for Testing` icon.
 
 - [motlabs/iOS-Proejcts-with-ML-Models](https://github.com/motlabs/iOS-Proejcts-with-ML-Models)<br>
   : The challenge using machine learning model created from tensorflow on iOS
-- [edvardHua/PoseEstimationForMobile](https://github.com/edvardHua/PoseEstimationForMobile)<br>
-  : TensorFlow project for pose estimation for mobile
-- [tucan9389/pose-estimation-for-mobile](https://github.com/tucan9389/pose-estimation-for-mobile)<br>
-  : forked from edvardHua/PoseEstimationForMobile
-- [tucan9389/FingertipEstimation-CoreML](https://github.com/tucan9389/FingertipEstimation-CoreML)<br>
-  : iOS project for fingertip estimation using CoreML.
+- [tucan9389/PoseEstimation-CoreML](https://github.com/tucan9389/PoseEstimation-CoreML)
